@@ -4,6 +4,7 @@ import "./globals.css";
 import Nabvar from "@/components/nabvar";
 import Footer from "@/components/footer";
 import Hero from "@/components/hero";
+import WorkoutProvider from "@/context/workoutContext";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,11 +28,13 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-black">
+        <WorkoutProvider>
         <Nabvar/>
         
 
         {children}
         <Footer/>
+        </WorkoutProvider>
 
         </body>
     </html>

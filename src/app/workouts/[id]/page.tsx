@@ -1,6 +1,8 @@
 import { Ifit } from "@/types/fits.type";
 import Image from "next/image";
 import React from "react";
+import Todayplan from "@/components/todayplan";
+import Savelater from "@/components/savelater";
 
 interface IworkoutDetailsPageProps {
   params: Promise<{
@@ -169,13 +171,9 @@ const workoutDetailsPage = async ({
 
             <div className="mt-7 flex flex-col gap-3 sm:flex-row">
 
-              <button className="rounded-lg bg-[#baff00] px-6 py-3 text-sm font-bold text-black transition hover:bg-[#a9e600]">
-                 Add to todays plan
-              </button>
+              <Todayplan workout={workout}/>
 
-              <button className="rounded-lg border border-[#39404a] px-6 py-3 text-sm text-gray-300 transition hover:border-gray-500">
-                ♡ Save for later
-              </button>
+              <Savelater workout={workout}/>
 
             </div>
 
