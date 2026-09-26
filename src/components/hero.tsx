@@ -34,7 +34,7 @@ const hero = () => {
           <Image
             src={HeroImg}
             alt="heroimg"
-            className="w-[220px] object-contain sm:w-[280px] md:w-[340px]"
+            className="w-55 object-contain sm:w-70 md:w-85"
           />
         </div>
 
