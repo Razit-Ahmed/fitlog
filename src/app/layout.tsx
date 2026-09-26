@@ -5,6 +5,7 @@ import Nabvar from "@/components/nabvar";
 import Footer from "@/components/footer";
 import Hero from "@/components/hero";
 import WorkoutProvider from "@/context/workoutContext";
+import { ToastContainer } from "react-toastify";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -34,6 +35,8 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
 
         {children}
         <Footer/>
+
+        <ToastContainer />
         </WorkoutProvider>
 
         </body>

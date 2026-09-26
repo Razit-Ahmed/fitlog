@@ -62,7 +62,7 @@ const fitsCard = ({fit} : IFitCardProps) => {
                 </div>
 
                 <div className="flex items-center gap-1">
-                  <span>🔥</span>
+                  
                   <span>{fit.caloriesBurned} kcal</span>
                 </div>
 

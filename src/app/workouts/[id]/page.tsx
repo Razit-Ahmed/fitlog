@@ -1,8 +1,8 @@
 import { Ifit } from "@/types/fits.type";
 import Image from "next/image";
 import React from "react";
-import Todayplan from "@/components/todayplan";
-import Savelater from "@/components/savelater";
+import Todayplan from "@/components/planlist/todayplan";
+import Savelater from "@/components/planlist/savelater";
 
 interface IworkoutDetailsPageProps {
   params: Promise<{
@@ -11,7 +11,7 @@ interface IworkoutDetailsPageProps {
 }
 
 const getFits = async () => {
-  const res = await fetch("https://api.abcz.workers.dev/api/fitlog");
+  const res = await fetch('https://api.api-store.workers.dev/api/fitlog');
   return res.json();
 };
 

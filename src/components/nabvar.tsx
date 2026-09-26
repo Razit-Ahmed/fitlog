@@ -5,7 +5,8 @@ import Link from "next/link";
 
 const Navbar = () => {
   return (
-    <div className="navbar bg-black shadow-sm border-b border-white">
+   <div className="navbar bg-black shadow-sm border-b border-white">
+    <div  className="container mx-auto w-10/11">
 
     
       <div className="navbar-start">
@@ -92,6 +93,7 @@ const Navbar = () => {
       </div>
 
     </div>
+   </div>
   );
 };
 
