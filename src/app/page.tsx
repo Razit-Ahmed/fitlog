@@ -1,9 +1,10 @@
 import React from 'react';
+import Hero from '@/components/hero';
 
 const page = () => {
   return (
     <div>
-      Fit Log
+      <Hero />
     </div>
   );
 };
