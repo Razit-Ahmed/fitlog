@@ -22,19 +22,27 @@ const WorkoutProvider = ({ children }: { children: ReactNode }) => {
   const [todayPlan, setTodayPlan] = useState<Ifit[]>([]);
   const [saveLater, setSaveLater] = useState<Ifit[]>([]);
 
+  // Remove workout from Today Plan
   const removeFromTodayPlan = (id: number) => {
-    setTodayPlan((prev) => prev.filter((fit) => fit.id !== id));
+    setTodayPlan((prev) => {
+      return prev.filter((fit) => fit.id !== id);
+    });
   };
 
+  // Remove workout from Saved
   const removeFromSaveLater = (id: number) => {
-    setSaveLater((prev) => prev.filter((fit) => fit.id !== id));
+    setSaveLater((prev) => {
+      return prev.filter((fit) => fit.id !== id);
+    });
   };
 
   const sharedData = {
     todayPlan,
     setTodayPlan,
+
     saveLater,
     setSaveLater,
+
     removeFromTodayPlan,
     removeFromSaveLater,
   };
